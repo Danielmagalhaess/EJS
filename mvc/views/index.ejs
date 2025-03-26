@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container2">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                <div class="inputs">
+                    <input type="text" id="usuario" name="usuario" placeholder="User">
+                </div>
+                <div class="inputs">
+                    <input type="password" id="senha" name="senha" placeholder="Password">
+                </div>
+                 <!-- Exibição das mensagens de erro -->
+                <% if (invalido) { %>
+                    <span class="error"><%= invalido %></span>
+                <% } %>
+                <% if (usuarioInvalido) { %>
+                    <span class="error"><%= usuarioInvalido %></span>
+                <% } %>
+                <% if (senhaInvalida) { %>
+                    <span class="error"><%= senhaInvalida %></span>
+                <% } %>
+                <div class="button">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+</body>
+</html>
